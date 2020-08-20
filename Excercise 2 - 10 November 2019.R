@@ -1,8 +1,3 @@
-# MASTER 2 EN STATISTIQUES ET ECONOMETRIE
-# EtUDIANT: TRAN NAM MAI
-# EXCERICSE 2: PROGRAMMATION
-# (30 lignes de commande)
-
 # Creer la fonction simul_elec()
 simul_elec <- function(n,cas,B){
   # Verifier que les arguments d'entree sont adequats au probleme: n impair, cas egale a "IC" ou "IAC_star"
@@ -24,7 +19,7 @@ simul_elec <- function(n,cas,B){
   majeur[,3][which(majeur[,3] == TRUE)] = 3
   majeur[,4][which(majeur[,4] == TRUE)] = 5
   
-  # Creer un tableau indiquant si D gagne selon le mécanisme indirect de l'election (Oui = 1, Non = 0)
+  # Creer un tableau indiquant si D gagne selon le mÃ©canisme indirect de l'election (Oui = 1, Non = 0)
   # Ce qui signifie que le nombre de grand electeur votant pour D devrait etre superieur a la moitie du total du grand electeur de ce pays (11 etant le nombre total de grand electeur de ce pays)
   gagne <- ifelse(rowSums(majeur) > 11/2, 1, 0)
   gagne <- t(t(gagne))
